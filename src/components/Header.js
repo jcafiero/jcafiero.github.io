@@ -7,7 +7,8 @@ const useStyles = makeStyles((theme) => ({
 		textAlign: 'center',
 		textTransform: 'uppercase',
 		fontWeight: 600,
-		fontFamily: 'Bogart,Recoleta,Helvetica Neue,Helvetica,Arial,sans-serif'
+		fontFamily: 'Bogart,Recoleta,Helvetica Neue,Helvetica,Arial,sans-serif',
+		margin: theme.spacing(4, 2)
 	}
 }));
 

@@ -16,8 +16,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const useStyles = makeStyles(() => ({
 	pageContainer: {
-		// 394px is calculated from 64px + 74px + 240px (Navbar + Header + Footer heights)
-		minHeight: 'calc(100vh - 394px)'
+		// 458px is calculated from 64px + 74px + 64px + 240px (Navbar + Header + Header margin + Footer heights)
+		minHeight: 'calc(100vh - 458px)'
 	}
 }))
 

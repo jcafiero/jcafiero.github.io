@@ -2,58 +2,58 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core';
+// import { makeStyles } from '@material-ui/core';
 
 import { Link as RouterLink } from 'react-router-dom';
 
-import Typewriter from 'typewriter-effect';
+// import Typewriter from 'typewriter-effect';
 
-const useStyles = makeStyles((theme) => ({
-  '@keyframes bounce': {
-    '0%': {
-      transform: 'scale(1,1)',
-      translateY: 0
-    },
-    '10%': {
-      transform: 'scale(1.1,0.9)',
-      translateY: 0
-    },
-    '30%': {
-      transform: 'scale(0.9,1.1)',
-      translateY: -100
-    },
-    '50%': {
-      transform: 'scale(1.05,0.95)',
-      translateY: 0
-    },
-    '57%': {
-      transform: 'scale(1,1)',
-      translateY: -7
-    },
-    '64%': {
-      transform: 'scale(1,1)',
-      translateY: 0
-    },
-    '100%': {
-      transform: 'scale(1,1)',
-      translateY: 0
-    }
-  },
-  bounce: {
-    '&:hover': {
-      color: 'red',
-      animationDuration: '1s',
-      animationName: 'bounce',
-      animationIterationCount:'infinite',
-      transformOrigin: 'bottom',
-      animationTimingFunction: 'cubic-bezier(0.280, 0.840, 0.420, 1)',
-    }
-  },
+// const useStyles = makeStyles((theme) => ({
+//   '@keyframes bounce': {
+//     '0%': {
+//       transform: 'scale(1,1)',
+//       translateY: 0
+//     },
+//     '10%': {
+//       transform: 'scale(1.1,0.9)',
+//       translateY: 0
+//     },
+//     '30%': {
+//       transform: 'scale(0.9,1.1)',
+//       translateY: -100
+//     },
+//     '50%': {
+//       transform: 'scale(1.05,0.95)',
+//       translateY: 0
+//     },
+//     '57%': {
+//       transform: 'scale(1,1)',
+//       translateY: -7
+//     },
+//     '64%': {
+//       transform: 'scale(1,1)',
+//       translateY: 0
+//     },
+//     '100%': {
+//       transform: 'scale(1,1)',
+//       translateY: 0
+//     }
+//   },
+//   bounce: {
+//     '&:hover': {
+//       color: 'red',
+//       animationDuration: '1s',
+//       animationName: 'bounce',
+//       animationIterationCount:'infinite',
+//       transformOrigin: 'bottom',
+//       animationTimingFunction: 'cubic-bezier(0.280, 0.840, 0.420, 1)',
+//     }
+//   },
   
-}))
+// }))
 
 const HomeContainer = (props) => {
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
     <React.Fragment>
       <Grid container>
