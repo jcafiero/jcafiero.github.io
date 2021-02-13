@@ -1,0 +1,33 @@
+{
+  "name": "lab3",
+  "version": "0.1.0",
+  "description": "CS554 Lab 3 - React Pokedex",
+  "private": false,
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "axios": "^0.16.2",
+    "bootstrap": "^4.3.1",
+    "react": "^16.0.0",
+    "react-bootstrap": "^1.0.0-beta.5",
+    "react-dom": "^16.0.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^1.1.4",
+    "typewriter-effect": "^2.17.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "lodash.merge": "^4.6.2",
+    "prop-types": "^15.7.2"
+  }
+}
