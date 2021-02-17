@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 
 import Slide from '@material-ui/core/Slide';
 import Toolbar from '@material-ui/core/Toolbar';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { Link as RouterLink } from 'react-router-dom';
 import Link from '@material-ui/core/Link';
+import { WbSunnyOutlined as SunIcon, Brightness2Outlined as MoonIcon } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 
 import { currentTheme, setTheme } from '../themes/themeUtils';
@@ -89,9 +90,9 @@ const Navbar = (props) => {
 							<Link component={RouterLink} to="/hobbies" className={classes.link} target="_self">
 								Hobbies
 							</Link>
-							<Button variant="outlined" color="inherit" onClick={changeTheme()} className={classes.themeToggle}>
-								{themeMode === 'light' ? "View in Dark Theme" : "View in Light Theme"}
-							</Button>
+							<IconButton variant="outlined" color="inherit" onClick={changeTheme()} aria-label={themeMode === 'light' ? "View page in dark theme": "View page in light theme" } className={classes.themeToggle}>
+								{themeMode === 'light' ? <MoonIcon /> : <SunIcon />}
+							</IconButton>
 						</Box>
 					</Toolbar>
 				</AppBar>

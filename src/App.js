@@ -7,7 +7,7 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AboutContainer from './components/About/AboutContainer';
-import HomeContainer from './components/HomeContainer';
+import HomeContainer from './components/Home/HomeContainer';
 import ResumeContainer from './components/Resume/ResumeContainer';
 import HobbiesContainer from './components/Hobbies/HobbiesContainer';
 import { makeStyles } from '@material-ui/core/styles';
@@ -29,7 +29,7 @@ const App = () => {
 				
 				<Navbar />
 				<Header />
-				<Grid container justify="center" className={classes.pageContainer}>
+				<Grid role="main" container justify="center" className={classes.pageContainer}>
 					<Grid item xs={12} md={8}>
 						<Switch>
 							<Route path="/" exact component={HomeContainer} />

@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 // import { makeStyles } from '@material-ui/core';
 
+import ContactPanel from './ContactPanel';
+
 import { Link as RouterLink } from 'react-router-dom';
 
 // import Typewriter from 'typewriter-effect';
@@ -75,14 +77,15 @@ const HomeContainer = (props) => {
       </Grid>
       <Grid container>
       <Typography variant="body1" color="primary" aria-label="Hi, I'm Jenn.">
-          This is a website I built to demonstrate my professional and personal interests. 
-        </Typography>
-        <Typography variant="h2">
-          Check out my resume!
-          <Button variant="contained" color="primary" component={RouterLink} to="/work/">
-            Go to resume
-          </Button>
-        </Typography>
+        This is a website I built to demonstrate my professional and personal interests. 
+      </Typography>
+      <Typography variant="h2">
+        Check out my resume!
+        <Button variant="contained" color="primary" component={RouterLink} to="/work/">
+          Go to resume
+        </Button>
+      </Typography>
+      <ContactPanel />
       </Grid>
     </React.Fragment>
   )

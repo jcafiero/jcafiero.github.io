@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
 	const classes = useStyles();
 	return (
-		<Typography variant="h1" className={classes.hero}>Jennifer Cafiero</Typography>
+		<Typography role="heading" variant="h1" className={classes.hero}>Jennifer Cafiero</Typography>
 	);
 }
 

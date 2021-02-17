@@ -35,6 +35,16 @@ export const defaultConfig = merge(
       }
     },
     overrides: {
+      MuiAppBar: {
+        root: {
+          border: 'none'
+        }
+      },
+      MuiPaper: {
+        root: {
+          border: 'thin solid black'
+        }
+      },
       MuiLink: {
         root: {
           fontFamily: '"Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif',
@@ -42,6 +52,12 @@ export const defaultConfig = merge(
             color: 'white'
           }
         }
+      }
+    },
+    props: {
+      MuiPaper: {
+        elevation: 0,
+        square: true
       }
     }
   }
