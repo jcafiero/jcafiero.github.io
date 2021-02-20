@@ -81,7 +81,7 @@ const EducationHistory = () => {
 			<Grid container direction="row" spacing={2} className={classes.educationContainer}>
 				{education.map(school => (
 					<Grid item xs={12} key={school.name}>
-						<Paper className={classes.schoolPaper}>
+						<Paper className={classes.schoolPaper} elevation={3}>
 							<Typography variant="h3" color="primary" className={classes.schoolName}>{school.name}<span className={classes.location}>{school.location}</span></Typography>
 							<Typography variant="body1" className={classes.degree}>{school.degree}<span className={classes.graduation}>{school.graduation}</span></Typography>
 							{school.coursework.map((course, index) => {
