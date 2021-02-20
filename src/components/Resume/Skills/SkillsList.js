@@ -67,16 +67,18 @@ const SkillsList = () => {
 							{skillGroup.category}
 						</Typography>
 						<div className={classes.skillsList}>
-							{skillGroup.list.map((skill, index) => {
-								const separator = ',\u00A0';
-								if (index < skillGroup.list.length - 1 ) {
-									return (
-										<Typography key={skill} variant="body1">{skill}{separator}</Typography>
-									)
-								} else {
-									return <Typography key={skill} variant="body1">{skill}</Typography>
-								}
+							<Typography variant="body1">
+								{skillGroup.list.map((skill, index) => {
+									const separator = ',\u00A0';
+									if (index < skillGroup.list.length - 1 ) {
+										return (
+											<React.Fragment key={skill}>{skill}{separator}</React.Fragment>
+										)
+									} else {
+										return <React.Fragment key={skill}>{skill}</React.Fragment>
+									}
 								})}
+							</Typography>
 						</div>
 					</div>
 				))}
