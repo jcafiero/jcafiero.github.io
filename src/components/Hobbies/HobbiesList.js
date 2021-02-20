@@ -17,6 +17,10 @@ import { Link as RouterLink } from 'react-router-dom';
 import hobbies from '../../data/hobbies';
 
 const useStyles = makeStyles((theme) => ({
+	dialogImage: {
+		width: '40%',
+		height: '40%'
+	},
 	gallery: {
 		display: 'flex',
 		flexDirection: 'column',
@@ -53,9 +57,34 @@ const useStyles = makeStyles((theme) => ({
 const HobbiesList = () => {
 	const classes = useStyles();
 	const [open, setOpen] = React.useState(true);
+	const [index, setIndex] = React.useState(0);
+	const [src, setSrc] = React.useState(hobbies.crossStitch[0].fileName);
+	const [picList] = React.useState(hobbies.crossStitch);
 
 	const handleClose = () => {
 		setOpen(false);
+	};
+
+	const onClickImage = (src) => {
+		
+		// setSrc(`/img/cross-stitch/${src}`)
+		// setOpen(true);
+	};
+
+	const onClickNext = () => {
+		if (index + 1 === picList.length) {
+			setIndex(0);
+		} else {
+			setIndex(index + 1);
+		}
+	};
+
+	const onClickPrevious = () => {
+		if (index - 1 === -1) {
+			setIndex(picList.length - 1);
+		} else {
+			setIndex(index - 1);
+		}
 	};
 
 	return (
@@ -86,10 +115,16 @@ const HobbiesList = () => {
 			<Grid className={classes.gallery}>
 				{hobbies.crossStitch.map(piece => (
 					<Box key={piece.name}>
-						<img src={`/img/cross-stitch/${piece.fileName}`} alt={piece.altText} height={piece.size.height} width={piece.size.width} />
+						<img src={`/img/cross-stitch/${piece.fileName}`} onClick={onClickImage(piece.fileName)} alt={piece.altText} height={piece.size.height} width={piece.size.width} />
 					</Box>
 				))}
 			</Grid>
+
+			{/* <Dialog fullScreen open={open} onClose={handleClose}>
+				<img src={`/img/cross-stitch/${picList[index].fileName}`} className={classes.dialogImage} />
+				<Button onClick={onClickPrevious}>Prev</Button>
+				<Button onClick={onClickNext}>Next</Button>
+			</Dialog> */}
 		</React.Fragment>
 	)
 };
