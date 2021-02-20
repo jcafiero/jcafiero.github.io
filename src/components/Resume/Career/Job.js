@@ -24,13 +24,13 @@ const Job = (props) => {
 	const classes = useStyles();
 
 	return (
-		<Paper elevation={3} className={classes.paper} {...other}>
+		<React.Fragment>
 			<Typography variant="h4" color="primary" className={classes.jobTitle}>
 				{job.roleTitle}
 			</Typography>
 			<WorkPeriod terms={job.workPeriod} />
 			<TaskList tasks={job.tasks} />
-		</Paper>
+		</React.Fragment>
 	)
 };
 

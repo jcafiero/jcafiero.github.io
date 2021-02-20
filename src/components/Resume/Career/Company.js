@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Card from '@material-ui/core/Card';
+import Paper from '@material-ui/core/Paper';
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
@@ -12,6 +14,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Job from './Job';
 
 const useStyles = makeStyles((theme) => ({
+	mobileCompanyName: {
+		textAlign: 'center'
+	},
 	timelineConnector: {
 		backgroundColor: theme.palette.secondary.main,
 	}
@@ -24,7 +29,7 @@ const Company = (props) => {
 		<TimelineItem>
 			<TimelineOppositeContent>
 				{role.roles.slice(0).reverse().map((job, index) => (
-					<Job key={index} job={job} />
+					<Paper elevation={3} className={classes.paper}><Job key={index} job={job} /></Paper>
 				))}
 			</TimelineOppositeContent>
 			<TimelineSeparator>
@@ -38,5 +43,20 @@ const Company = (props) => {
 		</TimelineItem>
 	)
 };
+
+const MobileCompany = (props) => {
+	const { role } = props;
+	const classes = useStyles();
+	return (
+		<Card>
+			<Typography variant="h3" color="secondary" className={classes.mobileCompanyName}>{role.companyName}</Typography>
+			{role.roles.slice(0).reverse().map((job, index) => (
+				<Job key={index} job={job} />
+			))}
+		</Card>
+	);
+};
+
+export { Company, MobileCompany };
 
 export default Company;
