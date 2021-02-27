@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import AboutContainer from './components/About/AboutContainer';
 import HomeContainer from './components/Home/HomeContainer';
 import ResumeContainer from './components/Resume/ResumeContainer';
@@ -31,6 +32,7 @@ const App = () => {
 				<Header />
 				<Grid role="main" container justify="center" className={classes.pageContainer}>
 					<Grid item xs={12} md={8}>
+						<ScrollToTop />
 						<Switch>
 							<Route path="/" exact component={HomeContainer} />
 							<Route path="/about/" component={AboutContainer} />
