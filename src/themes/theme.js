@@ -42,7 +42,7 @@ export const defaultConfig = merge(
       },
       MuiPaper: {
         root: {
-          border: 'thin solid black'
+          border: 'thin solid #999'
         }
       },
       MuiLink: {
