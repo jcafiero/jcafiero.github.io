@@ -81,7 +81,7 @@ const CareerTimeline = () => {
 			<Hidden mdUp>
 				<Grid container spacing={2} className={classes.mobileContainer}>
 					{career.slice(0).reverse().map(job => (
-						<Grid item xs={12} key={job}>
+						<Grid item xs={12} key={job.id}>
 							<MobileCompany role={job} />
 						</Grid>
 					))}
