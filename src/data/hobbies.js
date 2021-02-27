@@ -1,6 +1,42 @@
 const hobbies = {
   crossStitch: [
     {
+      name: 'Potted Hydrangeas',
+      fileName: 'potted_hydrangeas.jpg',
+      altText: 'Purple-blue hydrangeas in a planter',
+      size: {
+        height: 1008,
+        width: 756
+      }
+    },
+    {
+      name: 'Lighthouses',
+      fileName: 'lighthouses.jpg',
+      altText: '',
+      size: {
+        height: 1129,
+        width: 544
+      }
+    },
+    {
+      name: 'Santa\'s Workshop',
+      fileName: 'santas_workshop.jpg',
+      altText: '',
+      size: {
+        height: 1024,
+        width: 768
+      }
+    },
+    {
+      name: 'Fan-f***ing-tastic',
+      fileName: 'fantastic.jpg',
+      altText: '',
+      size: {
+        height: 832,
+        width: 810
+      }
+    },
+    {
       name: 'I can\'t adult today',
       fileName: 'cant_adult.jpg',
       altText: 'Embroidery hoop with finished cross stitched text reading "I can\'t adult today"',
