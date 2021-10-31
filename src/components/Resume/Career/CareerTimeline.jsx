@@ -73,14 +73,14 @@ const CareerTimeline = () => {
 			<Hidden smDown>
 				<Divider orientation="vertical" flexItem className={classes.divider} />
 				<Timeline align="alternate" className={classes.timelineContent}>
-					{career.slice(0).reverse().map(job => (
+					{career.slice(0).reverse().map((job) => (
 						<Company key={job.id} role={job} />
 					))}
 				</Timeline>
 			</Hidden>
 			<Hidden mdUp>
 				<Grid container spacing={2} className={classes.mobileContainer}>
-					{career.slice(0).reverse().map(job => (
+					{career.slice(0).reverse().map((job) => (
 						<Grid item xs={12} key={job.id}>
 							<MobileCompany role={job} />
 						</Grid>

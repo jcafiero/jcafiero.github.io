@@ -7,7 +7,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { Link as RouterLink } from 'react-router-dom';
 
-
 const useStyles = makeStyles((theme) => ({
 	aboutMeBio: {
 		padding: 30,
@@ -42,11 +41,15 @@ const AboutMe = () => {
 				<img src="img/GradCap.jpg" alt="Portrait of me" className={classes.aboutMePicture} />
 			</Grid>
 			<Grid item xl={9} md={7} sm={12} className={classes.aboutMeBio}>
-				<Typography variant="body1">Hi, I'm Jenn.</Typography>
-				<Typography variant="body1">I'm a Software Engineer with an attention to detail.</Typography>
-				<Typography variant="body1">I'm passionate about building design system components that create clean &amp; consistent user interfaces.</Typography>
-				<Typography variant="body1">Currently I'm a Software Engineer on the Design System Engineering team at iCIMS.</Typography>
-				<Typography variant="body1">In my free time, I love to cross stitch and crochet. You can check out some of what I've made in my <Link component={RouterLink} to="/hobbies/" className={classes.link}>Hobbies page</Link> (coming soon).</Typography>
+				<Typography variant="body1">Hi, I&apos;m Jenn.</Typography>
+				<Typography variant="body1">I&apos;m a Software Engineer with an attention to detail.</Typography>
+				<Typography variant="body1">I&apos;m passionate about building design system components that create clean &amp; consistent user interfaces.</Typography>
+				<Typography variant="body1">Currently I&apos;m a Software Engineer on the Design System Engineering team at iCIMS.</Typography>
+				<Typography variant="body1">
+					In my free time, I love to cross stitch and crochet. You can check out some of what I&apos;ve made in my&nbsp;
+					<Link component={RouterLink} to="/hobbies/" className={classes.link}>Hobbies page</Link>
+					&nbsp;(coming soon).
+				</Typography>
 			</Grid>
 		</Grid>
 	);

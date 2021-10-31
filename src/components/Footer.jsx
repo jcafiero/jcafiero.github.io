@@ -3,13 +3,14 @@ import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { darken, lighten, makeStyles } from '@material-ui/core/styles';
-import { GitHub, Instagram, LinkedIn, Mail } from '@material-ui/icons';
+import {
+	GitHub, Instagram, LinkedIn, Mail
+} from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
 	footerContainer: {
 		backgroundColor: theme.palette.type === 'light' ? lighten(theme.palette.primary.light, 0.85) : darken(theme.palette.primary.dark, 0.45),
 		minHeight: 240,
-		marginTop: theme.spacing(2),
 	},
 	footerItem: {
 		margin: '0 auto',
@@ -30,7 +31,7 @@ const SocialLinks = () => {
 			<IconButton color="primary" aria-label="My Instagram profile" href="https://instagram.com/howdyitsjenn"><Instagram /></IconButton>
 			<IconButton color="primary" aria-label="Send me an email at jcafiero2@gmail.com" href="mailto:jcafiero2@gmail.com"><Mail /></IconButton>
 		</Grid>
-	)
+	);
 };
 
 const Footer = () => {
@@ -42,7 +43,7 @@ const Footer = () => {
 				<Typography variant="body2">&copy; Jennifer Cafiero 2020 - 2021. All rights reserved.</Typography>
 			</Grid>
 		</Grid>
-	)
+	);
 };
 
 export default Footer;

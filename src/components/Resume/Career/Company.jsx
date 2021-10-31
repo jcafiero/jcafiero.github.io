@@ -11,6 +11,8 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
+import PropTypes from 'prop-types';
+
 import Job from './Job';
 
 const useStyles = makeStyles((theme) => ({
@@ -39,9 +41,13 @@ const Company = (props) => {
 			<TimelineContent>
 				<Typography variant="h3" color="secondary">{role.companyName}</Typography>
 			</TimelineContent>
-			
 		</TimelineItem>
-	)
+	);
+};
+
+Company.propTypes = {
+	// eslint-disable-next-line react/forbid-prop-types, react/require-default-props
+	role: PropTypes.object
 };
 
 const MobileCompany = (props) => {
@@ -56,6 +62,8 @@ const MobileCompany = (props) => {
 		</Card>
 	);
 };
+
+MobileCompany.propTypes = Company.propTypes;
 
 export { Company, MobileCompany };
 
