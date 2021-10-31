@@ -1,11 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core';
 
 import TaskList from './TaskList';
 import WorkPeriod from './WorkPeriod';
-
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
 	jobTitle: {
@@ -19,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Job = (props) => {
-	const { job, ...other } = props;
+	const { job } = props;
 
 	const classes = useStyles();
 
@@ -31,7 +30,12 @@ const Job = (props) => {
 			<WorkPeriod terms={job.workPeriod} />
 			<TaskList tasks={job.tasks} />
 		</React.Fragment>
-	)
+	);
+};
+
+Job.propTypes = {
+	// eslint-disable-next-line react/forbid-prop-types, react/require-default-props
+	job: PropTypes.object
 };
 
 export default Job;

@@ -14,13 +14,15 @@ const WorkPeriod = (props) => {
 	const { terms } = props;
 	const classes = useStyles();
 	return (
-		terms.map((term, index) => {
-			return (
-				<Typography variant="h5" key={index} className={classes.workPeriod}>
-					{term.startDate} - {term.endDate}
-				</Typography>);
-		})
-	)
+		terms.map((term, index) => (
+			<Typography variant="h5" key={index} className={classes.workPeriod}>
+				{term.startDate}
+				{' '}
+				-
+				{term.endDate}
+			</Typography>
+		))
+	);
 };
 
 export default WorkPeriod;

@@ -54,14 +54,14 @@ const SkillsList = () => {
 	return (
 		<React.Fragment>
 			<Box className={classes.headerContainer}>
-			<Typography variant="h2" className={classes.pageHeader}>
+				<Typography variant="h2" className={classes.pageHeader}>
 					<Link component={RouterLink} to="/work/skills" target="_self">
 						Skills
 					</Link>
 				</Typography>
 			</Box>
 			<Box className={classes.skillsContainer}>
-				{skills.map(skillGroup => (
+				{skills.map((skillGroup) => (
 					<div key={skillGroup.category}>
 						<Typography component="h3" variant="h5">
 							{skillGroup.category}
@@ -70,13 +70,15 @@ const SkillsList = () => {
 							<Typography variant="body1">
 								{skillGroup.list.map((skill, index) => {
 									const separator = ',\u00A0';
-									if (index < skillGroup.list.length - 1 ) {
+									if (index < skillGroup.list.length - 1) {
 										return (
-											<React.Fragment key={skill}>{skill}{separator}</React.Fragment>
-										)
-									} else {
-										return <React.Fragment key={skill}>{skill}</React.Fragment>
+											<React.Fragment key={skill}>
+												{skill}
+												{separator}
+											</React.Fragment>
+										);
 									}
+									return <React.Fragment key={skill}>{skill}</React.Fragment>;
 								})}
 							</Typography>
 						</div>
