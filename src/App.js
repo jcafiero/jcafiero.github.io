@@ -1,8 +1,10 @@
 import React from 'react';
 
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { LightDarkThemeProvider as ThemeProvider } from './components/LightDarkThemeProvider';
 import ErrorNotFound from './components/ErrorNotFound';
-import Grid from '@material-ui/core/Grid';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -11,27 +13,24 @@ import AboutContainer from './components/About/AboutContainer';
 import HomeContainer from './components/Home/HomeContainer';
 import ResumeContainer from './components/Resume/ResumeContainer';
 import HobbiesContainer from './components/Hobbies/HobbiesContainer';
-import { makeStyles } from '@material-ui/core/styles';
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
 	pageContainer: {
 		// 458px is calculated from 64px + 74px + 64px + 240px (Navbar + Header + Header margin + Footer heights)
-		minHeight: 'calc(100vh - 458px)'
+		minHeight: 'calc(100vh - 458px)',
+		marginBottom: theme.spacing(2)
 	}
-}))
+}));
 
 const App = () => {
 	const classes = useStyles();
 	return (
 		<ThemeProvider>
 			<Router>
-				
 				<Navbar />
 				<Header />
-				<Grid role="main" container justify="center" className={classes.pageContainer}>
-					<Grid item xs={12} md={8}>
+				<Grid container role="main" className={classes.pageContainer}>
+					{/* <Grid item xs={12} md={8}> */}
 						<ScrollToTop />
 						<Switch>
 							<Route path="/" exact component={HomeContainer} />
@@ -40,12 +39,12 @@ const App = () => {
 							<Route path="/hobbies/" component={HobbiesContainer} />
 							<Route path="/404" component={ErrorNotFound} />
 						</Switch>
-						</Grid>
+					{/* </Grid> */}
 				</Grid>
 				<Footer />
 			</Router>
-			</ThemeProvider>
-		);
-}
+		</ThemeProvider>
+	);
+};
 
 export default App;
