@@ -1,0 +1,80 @@
+Arguments: 
+  /Users/jcafiero/.nvm/versions/node/v12.14.1/bin/node /usr/local/Cellar/yarn/1.19.1/libexec/bin/yarn.js
+
+PATH: 
+  /Users/jcafiero/.nvm/versions/node/v12.14.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  12.14.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/jcafiero/Code/jcafiero.github.io/package.json: Unexpected token / in JSON at position 1137
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.19.1/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "jcafiero-resume-site",
+    "version": "0.1.0",
+    "author": "Jennifer Cafiero",
+    "description": "My personal portfolio showcasing my work experience and web development skills",
+    "homepage": "http://jcafiero.github.io",
+    "private": false,
+    "dependencies": {
+      "@babel/core": "^7.13.16",
+      "@babel/preset-react": "^7.13.13",
+      "@material-ui/core": "^4.11.3",
+      "@material-ui/icons": "^4.11.2",
+      "@material-ui/lab": "^4.0.0-alpha.57",
+      "axios": "^0.16.2",
+      "bootstrap": "^4.3.1",
+      "react": "16.14.0",
+      "react-bootstrap": "^1.0.0-beta.5",
+      "react-dom": "16.14.0",
+      "react-router": "^5.1.2",
+      "react-router-dom": "^5.1.2",
+      "react-scripts": "^2.0.3",
+      "typewriter-effect": "^2.17.0"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test --env=jsdom",
+      "eject": "react-scripts eject",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build",
+      "lint": "eslint --ext .jsx,.js src/"
+    },
+    "devDependencies": {
+      "@babel/plugin-transform-react-jsx": "^7.13.12",
+      "@babel/preset-env": "^7.13.15",
+      // "babel-eslint": "^10.1.0",
+      "clsx": "^1.1.1",
+      "eslint": "^7.25.0",
+      "eslint-config-airbnb": "^18.2.1",
+      "eslint-config-google": "^0.14.0",
+      "eslint-plugin-import": "^2.22.1",
+      "eslint-plugin-jsx-a11y": "^6.4.1",
+      "eslint-plugin-prettier": "^3.3.1",
+      "eslint-plugin-react": "^7.23.2",
+      "eslint-plugin-react-hooks": "^4.2.0",
+      "gh-pages": "^3.1.0",
+      "lodash.merge": "^4.6.2",
+      "prop-types": "^15.7.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
