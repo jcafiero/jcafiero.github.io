@@ -1,7 +1,8 @@
 const career = [
 	{
 		id: 1,
-		companyName: `Applebee's`,
+		// eslint-disable-next-line quotes
+		companyName: "Applebee's",
 		logo: 'img/applebees.jpg',
 		roles: [
 			{
@@ -22,7 +23,7 @@ const career = [
 	},
 	{
 		id: 2,
-		companyName: `Movado Group, Inc.`,
+		companyName: 'Movado Group, Inc.',
 		roles: [
 			{
 				roleTitle: 'PickPro Co-Op',
@@ -44,7 +45,7 @@ const career = [
 	},
 	{
 		id: 3,
-		companyName: `AB Global`,
+		companyName: 'AB Global',
 		roles: [
 			{
 				roleTitle: 'Intern',
@@ -69,7 +70,7 @@ const career = [
 	},
 	{
 		id: 4,
-		companyName: `Prudential Financial`,
+		companyName: 'Prudential Financial',
 		roles: [
 			{
 				roleTitle: 'Prudential Technology Cooperative Internship - Vantage & Illustrations',
@@ -92,7 +93,7 @@ const career = [
 	},
 	{
 		id: 5,
-		companyName: `iCIMS`,
+		companyName: 'iCIMS',
 		roles: [
 			{
 				roleTitle: 'Software Development Intern',
@@ -129,15 +130,15 @@ const career = [
 			{
 				roleTitle: 'Software Engineer II - UI Components Team',
 				tasks: [
-					'Responsible for maintenance and improvements to the company\'s existing component library (resolve accessibility issues, bug fixes, localization updates)',
-					'Develops composite components as needed that are reused by the other agile teams',
+					'Was responsible for maintenance and improvements to the company\'s existing component library (resolved accessibility issues, bug fixes, localization updates)',
+					'Developed composite components as needed that are reused by the other agile teams',
 					'Performed thorough research into open source component library Material UI that was vital in the planning phase of transitioning to leverage this library',
 					'Themed Material UI components to match company branding and design specs for a more consistent user experience'
 				],
 				workPeriod: [
 					{
 						startDate: 'August 2020',
-						endDate: 'Present'
+						endDate: 'September 2021'
 					}
 				]
 			}
