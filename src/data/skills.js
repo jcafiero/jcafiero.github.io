@@ -1,18 +1,18 @@
 const skills = [
 	{
-			category: 'Software Development Skills',
-			list: [
-				'React',
-				'Node.js',
-				'HTML',
-				'CSS',
-				'JavaScript/jQuery',
-				'Python',
-				'Java',
-				'C++',
-				'SQL Fundamentals',
-				'Scheme'
-			]
+		category: 'Software Development Skills',
+		list: [
+			'React',
+			'Node.js',
+			'HTML',
+			'CSS',
+			'JavaScript/jQuery',
+			'Python',
+			'Java',
+			'C++',
+			'SQL Fundamentals',
+			'Scheme'
+		]
 	},
 	{
 		category: 'Operating Systems',
